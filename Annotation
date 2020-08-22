@@ -1,0 +1,7 @@
+1.
+module load ncbi-blast/2.6.0
+makeblastdb -in uniprot_sprot.fasta -dbtype prot -hash_index -parse_seqids -out
+
+2. 
+module load ncbi-blast/2.6.0
+blastx -query Trinity.fasta -db swissprot -out Trinigy_blastout -evalue 1e-5 -num_threads 40 -max_target_seqs 20 -outfmt "6 qseqid sseqid stitle sgi sacc pident length mismatch qstart qend sstart send evalue bitscore"
