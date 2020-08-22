@@ -1,0 +1,2 @@
+module load fastqc/11.5
+fastqc /gpfs01/home/Catfish/clean_data/Chan5-2_R1_left_paired_trimmed.fq
