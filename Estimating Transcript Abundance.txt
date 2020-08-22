@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=20,walltime=960:00:00,flags=ADVRES:liuzhan_lab
+
+###PBS -d .
+
+###email me
+#PBS -M ee@gmail.com
+#PBS -m abe
+
+module load trinity
+module load samtools
+module load gcc/5.3.0
+module load rsem/1.3.0
+
+/tools/trinityrnaseq-2.4.0/util/align_and_estimate_abundance.pl --transcripts Trinity.fasta --seqType fq --samples_file samples.txt --est_method RSEM --aln_method bowtie2 --trinity_mode --prep_reference --output_dir RSEMResult --thread_count 26

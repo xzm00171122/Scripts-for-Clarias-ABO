@@ -1,0 +1,2 @@
+module load R/3.4.3
+/tools/trinityrnaseq-2.4.0/util/abundance_estimates_to_matrix.pl --est_method RSEM --cross_sample_norm TMM --name_sample_by_basedir --quant_files genes.quant_file.txt --out_prefix genes

@@ -1,0 +1,2 @@
+module load cdhit
+cd-hit-est -i Trinity.fasta -o pan_Trinity95 -c 0.95 -n 10 -M 16000 -T 8

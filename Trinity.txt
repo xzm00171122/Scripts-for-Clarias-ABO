@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=20,walltime=960:00:00,flags=ADVRES:davisj8_lab
+
+###PBS -d .
+
+###email me
+#PBS -M ee@gmail.com
+#PBS -m abe
+
+###files to write out
+#PBS -o zdefault5.out
+#PBS -e zerrorfile5
+
+#export LD_LIBRARY_PATH=/tools/jags-4.3.0/lib64:$LD_LIBRARY_PATH
+
+###load your modules once on the node
+
+module load trinity/2.4.0
+cd /scratch/NS1809044/NS1809044_cleandata/clarias
+
+#running and writing output file
+#mpirun -np 2 ./ScaTeLib.x 2 > zoutscatelib
+#mpirun -np 40 ./asyncAPI > zoutasyncgpu
+#mpirun -np 40 ./simpleMPIrun > zoutsimplempi
+#mpirun -np 2 ./MonteCarloMultiGPU > zoutmonte
+#test it with MPI
+#mpirun -np 40 ./test_talshGPUandMPI.x > zouttalshgpuandmpi
+#test it just for GPU
+#./test_talshGPUnoMPI.x > zout
+
+Trinity --seqType fq --samples_file samples.txt --CPU 20 --max_memory 100G --no_version_check --output /home/Clarias_trinity/

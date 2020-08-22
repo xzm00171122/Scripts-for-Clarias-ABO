@@ -1,0 +1,8 @@
+1# longest orf
+module load transdecoder
+TransDecoder.LongOrfs -t clarias_Trinity95
+
+
+2# cds
+module load transdecoder
+TransDecoder.Predict -t clarias_Trinity95

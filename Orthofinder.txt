@@ -1,0 +1,5 @@
+module load orthofinder
+module load mafft
+module load fasttree
+
+orthofinder -f prot_input1 -S diamond -M msa -T fasttree

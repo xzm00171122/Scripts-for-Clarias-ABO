@@ -1,0 +1,2 @@
+module load R/3.4.3
+/tools/trinityrnaseq-2.4.0/Analysis/DifferentialExpression/run_DE_analysis.pl --matrix genes.counts.matrix1 --method DESeq2 --samples_file samples_file
